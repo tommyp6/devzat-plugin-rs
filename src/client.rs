@@ -9,7 +9,12 @@ use tonic::{metadata::MetadataValue, transport::Channel, Request};
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
-    let channel = Channel::from_static("https://devzat.hackclub.com:5556").connect().await?;
+    let instance_host = match env::var("PLUGIN_HOST") {
+        Ok(host) => host,
+        Err(_) => panic!("Missing PLUGIN_HOST")
+    };
+
+    let channel = Channel::from_shared(instance_host)?.connect().await?;
 
     let auth_token = match env::var("PLUGIN_TOKEN") {
         Ok(token) => token,
