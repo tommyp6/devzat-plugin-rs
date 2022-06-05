@@ -140,7 +140,7 @@ dependencies = [
 [[package]]
 name = "devzat-rs"
 version = "0.1.0"
-source = "git+https://github.com/TommyPujol06/devzat-rs#870cbc6884495f0602f8185a57111f8293fed25f"
+source = "git+https://github.com/TommyPujol06/devzat-rs#1093574d6f4a36066209ff4922d2f5546742e241"
 dependencies = [
  "prost",
  "tokio",

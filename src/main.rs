@@ -24,5 +24,11 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
         )
         .await?;
 
+    client
+        .register_cmd("greet", "Greet someone.", "<name>", |event| async move {
+            format!("Hello {}!", event.args)
+        })
+        .await?;
+
     Ok(())
 }
