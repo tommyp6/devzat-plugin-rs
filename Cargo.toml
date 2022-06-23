@@ -7,6 +7,3 @@ edition = "2021"
 [dependencies]
 devzat-rs = { git = "https://github.com/TommyPujol06/devzat-rs" }
 tokio = { version = "1.19", features = ["macros", "rt-multi-thread"] }
-
-[build-dependencies]
-tonic-build = "0.7.2"
