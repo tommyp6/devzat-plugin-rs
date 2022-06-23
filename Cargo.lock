@@ -139,7 +139,8 @@ dependencies = [
 [[package]]
 name = "devzat-rs"
 version = "0.1.0"
-source = "git+https://github.com/TommyPujol06/devzat-rs#67da551e20e6e61037504be03ed738f4b97d2460"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c8d3397dd472fd945323e5e3b3026ae4ab616a7f7819d27346493df22e48e61d"
 dependencies = [
  "futures",
  "futures-util",
